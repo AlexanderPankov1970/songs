@@ -5,6 +5,7 @@ const SongDetail = ({ song }) => {
   if (!song) {
     return <div>Select your favorite song</div>;
   }
+  // console.log(song);
   //console.log(props);
   return (
     <div>
@@ -18,7 +19,7 @@ const SongDetail = ({ song }) => {
   );
 };
 const mapStateToProps = (state) => {
-  return { song: state.selectedSong };
+  return { song: state.selectedSong }; //from combineReducers
 };
 
 export default connect(mapStateToProps)(SongDetail);
